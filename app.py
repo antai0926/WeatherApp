@@ -2,7 +2,7 @@
 
 from flask import Flask, render_template, request, g, make_response
 import requests
-import sqlite3
+import sqlite3, os
 
 app = Flask(__name__)
 
