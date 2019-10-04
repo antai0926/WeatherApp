@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>Search City Weather</h1>
+    <form action="/" method="POST">
+        <input name="city" placeholder="Enter a city name...">
+        <input type="submit">
+    </form class="Weather-app">
+    {% if data %}
+    <br>
+    <h1>{{data}}</h1>
+    {% endif %}
+
+{% endblock %}

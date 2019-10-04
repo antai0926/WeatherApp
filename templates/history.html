@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">City</th>
+                <th scope="col">Temperature</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        {% if weathers %}
+            {% for weather in weathers %}
+                <tr>
+                    <th scope="row">{{ weather.city }}</th>
+                    <td>{{ weather.temp }}°C</td>
+                    <td>{{ weather.descript }}</td>
+                </tr>
+            {% endfor %}
+        {% endif %}
+    </table>
+
+{% endblock %}
